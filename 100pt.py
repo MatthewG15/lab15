@@ -20,6 +20,7 @@ targety2 = 80
 target = drawpad.create_rectangle(targetx1,targety1,targetx2,targety2, fill="blue")
 player = drawpad.create_rectangle(240,240,260,260, fill="pink")
 direction = 4
+didWeHit = False
 
 
 class MyApp:
@@ -120,7 +121,7 @@ class MyApp:
                 Px1, Py1, Px2, Py2 = drawpad.coords(player)
                 # Do your if statement - remember to return True if successful!                
            	if (Px1 > x1 and Px2 < x2)and(Py1 > y1 and Py2 < y2):
-           	        self.configure(target, fill = "red")
+           	        self.target.configure(fill = "red")
            	        return True
 myapp = MyApp(root)
 root.mainloop()
